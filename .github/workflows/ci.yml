@@ -1,0 +1,41 @@
+name: CI
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - dev
+  workflow_dispatch:
+
+jobs:
+
+  dist:
+    runs-on: ubuntu-latest
+    # Run only if pushed to dev branch
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Setup Python 3.8
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+      - name: Copy extension files
+        run: |
+          mkdir -p final/src
+          mkdir -p final/lib
+          cp -r src/* final/src/
+          cp -r lib/* final/lib/
+          cp README.md final/
+          sed -i 's/<!-- REPO-BRANCH-INFO -->/<!-- REPO-BRANCH-INFO -->\n\n> [!NOTE]\n> The following is an auto generated branch from dev branch, if you like to get the latest (and maybe more broken) version please use dev branch./g' final/README.md
+      - name: Generate index files
+        run: |
+          python3 ci/generate-index.py
+      - name: Deploy to Repo branch
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          BRANCH: repo
+          REPO: self
+          FOLDER: final
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "📈 Automatic deployment from felipebonfim2006/shosetsu-extensions@{long-sha}"

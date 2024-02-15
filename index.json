@@ -1,0 +1,110 @@
+{
+	"libraries": [
+        {
+          "name": "247truyen",
+          "ver": "1.1.2"
+        },
+        {
+          "name": "CommonCSS",
+          "ver": "1.0.1"
+        },
+        {
+          "name": "dkjson",
+          "ver": "1.0.1"
+        },
+        {
+          "name": "NovelFull",
+          "ver": "2.0.6"
+        },
+        {
+          "name": "url",
+          "ver": "1.0.0"
+        },
+        {
+          "name": "WWVolare",
+          "ver": "1.2.1"
+        },
+        {
+          "name": "Madara",
+          "ver": "2.9.2"
+        },
+        {
+          "name": "NaoAPI",
+          "ver": "1.0.1"
+        },
+        {
+          "name": "WPCommon",
+          "ver": "1.0.3"
+        },
+        {
+          "name": "MDLua",
+          "ver": "1.0.0"
+        },
+        {
+          "name": "Bixbox",
+          "ver": "1.1.0"
+        }
+      ],
+	"scripts": [
+        {
+            "name": "Central Novel",
+            "fileName": "CentralNovel",
+            "id": 227675,
+            "imageURL": "https://centralnovel.com/wp-content/uploads/2021/06/CENTRAL-NOVEL-LOGO-DARK-.png",
+            "lang": "pt",
+            "ver": "1.0.0",
+            "libVer": "1.0.0",
+            "md5": ""
+          }, 
+          {
+            "name": "Light Novels Brasil",
+            "fileName": "LightNovelsBrasil",
+            "id": 172007,
+            "imageURL": "https://lightnovelbrasil.com/wp-content/uploads/2022/11/cropped-logo.png",
+            "lang": "pt",
+            "ver": "1.0.0",
+            "libVer": "1.0.0",
+            "md5": ""
+          },
+          {
+            "name": "Kiniga",
+            "fileName": "Kiniga",
+            "imageURL": "https://www.kiniga.com/wp-content/uploads/2017/10/New-Logo-Inv-150px.png",
+            "id": 172006,
+            "lang": "pt",
+            "ver": "1.0.0",
+            "libVer": "1.0.0",
+            "md5": ""
+          },
+          {
+            "name": "E-Novel",
+            "fileName": "E-Novel",
+            "imageURL": "https://e-novel.online/wp-content/uploads/2021/06/logo-novela.fw_.png",
+            "id": 172008,
+            "lang": "pt",
+            "ver": "1.0.0",
+            "libVer": "1.0.0",
+            "md5": ""
+          },
+          {
+            "name": "BL Novels",
+            "fileName": "BLNovels",
+            "imageURL": "https://blnovels.net/wp-content/uploads/2022/07/cropped-100-Sem-Ti%CC%81tulo_20220712124716-192x192.png",
+            "id": 172002,
+            "lang": "pt",
+            "ver": "1.0.0",
+            "libVer": "1.0.0",
+            "md5": ""
+          },
+          {
+            "name": "Novel Mania",
+            "fileName": "NovelMania",
+            "id": 250401,
+            "imageURL": "https://novelmania.com.br/assets/logo-blue-ccbd5d317242b0f0479edd2cad954fd235dbdfeb662bb338d987f8f57e3794a2.png",
+            "lang": "pt",
+            "ver": "1.0.0",
+            "libVer": "1.0.0",
+            "md5": ""
+          }
+	]
+}
