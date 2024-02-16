@@ -74,7 +74,7 @@ local defaults = {
     availableTypes = nil,
 }
 
-local ORDER_BY_FILTER_EXT = { "A-Z", "Z-A", "Latest Added", "Latest Update", "Popular" }
+local ORDER_BY_FILTER_EXT = { "A-Z", "Z-A", "Últimos Adicionados", "Últimos Lançamentos", "Populares" }
 local ORDER_BY_FILTER_KEY = 2
 local STATUS_FILTER_KEY_COMPLETED = 6
 local STATUS_FILTER_KEY_ONGOING = 7
@@ -425,23 +425,23 @@ return function(baseURL, _self)
     local keyIDGenre = 100
     local keyIDType = 300
     local filters = {
-        DropdownFilter(ORDER_BY_FILTER_KEY, "Order by", ORDER_BY_FILTER_EXT),
+        DropdownFilter(ORDER_BY_FILTER_KEY, "Ordenar por", ORDER_BY_FILTER_EXT),
         FilterGroup("Status", {
-            CheckboxFilter(STATUS_FILTER_KEY_ONGOING, "Ongoing"),
-            CheckboxFilter(STATUS_FILTER_KEY_ON_HOLD, "Hiatus"),
-            CheckboxFilter(STATUS_FILTER_KEY_COMPLETED, "Completed")
+            CheckboxFilter(STATUS_FILTER_KEY_ONGOING, "Em lançamento"),
+            CheckboxFilter(STATUS_FILTER_KEY_ON_HOLD, "Hiato"),
+            CheckboxFilter(STATUS_FILTER_KEY_COMPLETED, "Completo")
         }),
     }
 
     if _self.availableGenres ~= nil then
-        filters[#filters + 1] = FilterGroup("Genres", map(_self.availableGenres, function (v)
+        filters[#filters + 1] = FilterGroup("Gêneros", map(_self.availableGenres, function (v)
             keyIDGenre = keyIDGenre + 1
             _self.genres_map[keyIDGenre] = fixupGenre(v)
             return CheckboxFilter(keyIDGenre, v)
         end))
     end
     if _self.availableTypes ~= nil then
-        filters[#filters + 1] = FilterGroup("Type", map(_self.availableTypes, function (v)
+        filters[#filters + 1] = FilterGroup("Tipo", map(_self.availableTypes, function (v)
             keyIDType = keyIDType + 1
             _self.types_map[keyIDType] = fixupGenre(v)
             return CheckboxFilter(keyIDType, v)
