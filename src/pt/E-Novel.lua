@@ -1,4 +1,4 @@
--- {"id":172008,"ver":"1.0.0","libVer":"1.0.0","author":"felipebonfim2006","dep":["Madara=2.9.0"]}
+-- {"id":172008,"ver":"1.0.0","libVer":"1.0.0","author":"felipebonfim2006","dep":["Madara=2.9.2"]}
 
 return Require("Madara")("https://e-novel.online", {
     id = 172008,
